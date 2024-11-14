@@ -43,7 +43,36 @@ public class LinkedList<T> {
             System.out.print(current.value + " -> ");
             current = current.next;
         }
-        System.out.println("null");
+        System.out.println("null\n");
     }
 
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public int size() {
+        if (isEmpty()) {
+            return 0;
+        }
+        int size = 1;
+
+        Node<T> currentNode = head;
+        while (currentNode.next != null) {
+            size += 1;
+            currentNode = currentNode.next;
+        }
+
+        return size;
+    }
+
+    public T poll() {
+
+        if (isEmpty()) {
+            return null;
+        }
+
+        Node<T> node = head;
+        head = head.next;
+        return node.value;
+    }
 }

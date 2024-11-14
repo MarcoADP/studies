@@ -1,7 +1,6 @@
 package binarytree;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import linkedlist.LinkedList;
 
 public class BinaryTree {
 
@@ -41,7 +40,7 @@ public class BinaryTree {
             System.out.println("Tree empty");
         }
 
-        Queue<Node> queue = new LinkedList<>();
+        LinkedList<Node> queue = new LinkedList<>();
         queue.add(root);
 
         int height = 1;

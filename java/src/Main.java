@@ -6,9 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //createBinaryTree();
-        //createAvlTree();
-        createLinkedList();
+        //createLinkedList();
+        createBinaryTree();
+        createAvlTree();
 
     }
 
@@ -42,26 +42,49 @@ public class Main {
     }
 
     private static void createLinkedList() {
-        LinkedList<Integer> lista = new LinkedList<>();
 
-        lista.add(10);
-        lista.add(20);
-        lista.add(30);
-        lista.add(40);
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        System.out.println("List is empty? " + linkedList.isEmpty());
 
-        System.out.print("After creating a list: ");
-        lista.print();
+        linkedList.add(10);
+        linkedList.add(20);
+        linkedList.add(30);
+        linkedList.add(40);
 
-        lista.remove(20);
+        System.out.print("After adding elements: ");
+        linkedList.print();
+        System.out.println("list is empty? " + linkedList.isEmpty());
+
+        linkedList.remove(20);
         System.out.print("After removing the value 20: ");
-        lista.print();
+        linkedList.print();
 
-        lista.remove(40);
+        linkedList.remove(40);
         System.out.print("After removing the value 40: ");
-        lista.print();
+        linkedList.print();
 
-        lista.add(50);
+        linkedList.add(50);
         System.out.print("After adding the value 50: ");
-        lista.print();
+        linkedList.print();
+
+        linkedList.poll();
+        System.out.print("After polling: ");
+        System.out.println("list is empty? " + linkedList.isEmpty());
+        linkedList.print();
+
+        linkedList.poll();
+        System.out.print("After polling: ");
+        System.out.println("list is empty? " + linkedList.isEmpty());
+        linkedList.print();
+
+        linkedList.poll();
+        System.out.print("After polling: ");
+        System.out.println("list is empty? " + linkedList.isEmpty());
+        linkedList.print();
+
+        linkedList.poll();
+        System.out.print("After polling: ");
+        System.out.println("list is empty? " + linkedList.isEmpty());
+        linkedList.print();
     }
 }
