@@ -1,9 +1,16 @@
+import binarytree.AVLTree;
 import binarytree.BinaryTree;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        createBinaryTree();
+        createAvlTree();
+
+    }
+
+    private static void createBinaryTree() {
         BinaryTree binaryTree = new BinaryTree();
         binaryTree.insert(50);
         binaryTree.insert(30);
@@ -19,7 +26,16 @@ public class Main {
         binaryTree.insert(69);
 
         binaryTree.print();
-
     }
 
+    private static void createAvlTree() {
+        AVLTree avlTree = new AVLTree();
+        avlTree.insert(10);
+        avlTree.insert(20);
+        avlTree.insert(30);
+        avlTree.insert(40);
+        avlTree.insert(50);
+        avlTree.insert(25);
+        avlTree.print();
+    }
 }

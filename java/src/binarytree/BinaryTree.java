@@ -5,44 +5,58 @@ import java.util.Queue;
 
 public class BinaryTree {
 
-    BTNode root;
+    Node root;
 
     public void insert(int value) {
         root = insertRecursive(root, value);
     }
 
-    private BTNode insertRecursive(BTNode node, int value) {
+    protected Node insertRecursive(Node node, int value) {
         if (node == null) {
-            return new BTNode(value);
+            return new Node(value);
         }
 
         if (value < node.value) {
             node.left = insertRecursive(node.left, value);
         } else if (value > node.value) {
             node.right = insertRecursive(node.right, value);
+        } else {
+            return node;
         }
+
+        node.height = 1 + Math.max(getHeight(node.left), getHeight(node.right));
 
         return node;
 
     }
 
+    protected int getHeight(Node node) {
+        return (node == null) ? 0 : node.height;
+    }
+
     public void print() {
+
+        System.out.println("\nPrinting Tree");
         if (root == null) {
             System.out.println("Tree empty");
         }
 
-        Queue<BTNode> queue = new LinkedList<>();
+        Queue<Node> queue = new LinkedList<>();
         queue.add(root);
 
         int height = 1;
         while (!queue.isEmpty()) {
 
             int levelSize = queue.size();
-            System.out.printf("Height %s => ", height);
+            System.out.printf("Level %s => ", height);
             for (int i = 0; i < levelSize; i++) {
 
-                BTNode node = queue.poll();
-                System.out.printf("%s [%s|%s] \t", node.value, node.left, node.right);
+                if (queue.isEmpty()) {
+                    return;
+                }
+
+                Node node = queue.poll();
+                System.out.printf("%s [%s | %s] \t", node, getValue(node.left), getValue(node.right));
 
                 if (node.left != null) {
                     queue.add(node.left);
@@ -59,4 +73,7 @@ public class BinaryTree {
 
     }
 
+    private int getValue(Node node) {
+        return node == null ? -1 : node.value;
+    }
 }
