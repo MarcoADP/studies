@@ -2,7 +2,7 @@ package linkedlist;
 
 public class LinkedList<T> {
 
-    private Node<T> head;
+    public Node<T> head;
 
     public void add(T value) {
         Node<T> newNode = new Node<>(value);
@@ -43,7 +43,7 @@ public class LinkedList<T> {
             System.out.print(current.value + " -> ");
             current = current.next;
         }
-        System.out.println("null\n");
+        System.out.println("null");
     }
 
     public boolean isEmpty() {

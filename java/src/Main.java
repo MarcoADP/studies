@@ -1,5 +1,6 @@
 import binarytree.AVLTree;
 import binarytree.BinaryTree;
+import hashtable.HashTable;
 import linkedlist.LinkedList;
 
 public class Main {
@@ -7,8 +8,9 @@ public class Main {
     public static void main(String[] args) {
 
         //createLinkedList();
-        createBinaryTree();
-        createAvlTree();
+        //createBinaryTree();
+        //createAvlTree();
+        createHashTable();
 
     }
 
@@ -87,4 +89,26 @@ public class Main {
         System.out.println("list is empty? " + linkedList.isEmpty());
         linkedList.print();
     }
+
+    private static void createHashTable() {
+        HashTable<String, String> hashTable = new HashTable<>(10);
+        hashTable.put("100", "BBB");
+        hashTable.put("1000", "CCC");
+        hashTable.put("199", "DDD");
+        hashTable.put("199", "EEE");
+        hashTable.print();
+        System.out.println("Size: " + hashTable.getSize());
+
+        System.out.println("Getting Key 199 => " + hashTable.get("199"));
+        System.out.println("Getting Key 200 => " + hashTable.get("200"));
+
+        System.out.println("Removing Key 199 => " + hashTable.remove("199"));
+        System.out.println("Removing Key 199 => " + hashTable.remove("199"));
+
+        hashTable.print();
+        System.out.println("Size: " + hashTable.getSize());
+
+    }
+
+
 }

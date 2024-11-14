@@ -10,4 +10,18 @@ public class Node<T> {
         this.next = null;
     }
 
+    public T getValue() {
+        return value;
+    }
+
+    public Node<T> getNext() {
+        return next;
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "value=" + value +
+                '}';
+    }
 }
