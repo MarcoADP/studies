@@ -75,4 +75,20 @@ public class BinaryTree {
     private int getValue(Node node) {
         return node == null ? -1 : node.value;
     }
+
+    public boolean search(int value) {
+        return searchNode(root, value);
+    }
+
+    private boolean searchNode(Node root, int value) {
+        if (root == null || root.value == value) {
+            return root != null;
+        }
+
+        if (value < root.value) {
+            return searchNode(root.left, value);
+        } else {
+            return searchNode(root.right, value);
+        }
+    }
 }
