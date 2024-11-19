@@ -47,7 +47,6 @@ public class HashTable<K, V> {
 
     public void put(K key, V value) {
         int bucketIndex = getBucketIndex(key);
-        System.out.printf("Adding [%s, %s] at index %s\n", key, value, bucketIndex);
         LinkedList<HashNode<K, V>> bucket = buckets[bucketIndex];
 
         Node<HashNode<K, V>> currentNode = bucket.head;
