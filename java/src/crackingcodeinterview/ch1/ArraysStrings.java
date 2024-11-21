@@ -9,8 +9,18 @@ public class ArraysStrings {
     public static void main(String[] args) {
 
         //verifyUniqueCharacters();
+        //verifyStringsPermutation();
+        urlify();
+    }
 
-        verifyStringsPermutation();
+    private static void urlify() {
+        String word = "Mr John Smith    ";
+        int length = 13;
+        System.out.println("\nUrlify with StringBuilder");
+        System.out.printf(ANSWER_FORMAT, word, Urlify.urlifyStringBuilder(word.toCharArray(), length));
+
+        System.out.println("\nUrlify with CharArray");
+        System.out.printf(ANSWER_FORMAT, word, Urlify.urlifyCharArray(word.toCharArray(), length));
 
     }
 
