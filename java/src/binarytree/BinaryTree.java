@@ -91,4 +91,25 @@ public class BinaryTree {
             return searchNode(root.right, value);
         }
     }
+
+    public boolean isSameTree(BinaryTree otherTree) {
+        return isSameNode(root, otherTree.root);
+    }
+
+    private boolean isSameNode(Node node1, Node node2) {
+
+        if (node1 == null && node2 == null) {
+            return true;
+        }
+
+        if (node1 == null || node2 == null) {
+            return false;
+        }
+
+        if (node1.value != node2.value) {
+            return false;
+        }
+
+        return isSameNode(node1.left, node2.left) && isSameNode(node1.right, node2.right);
+    }
 }
