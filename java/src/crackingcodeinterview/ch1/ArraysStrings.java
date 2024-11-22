@@ -15,7 +15,17 @@ public class ArraysStrings {
         //verifyStringsPermutation();
         //urlify();
         //checkPermutationPalindrome();
-        checkOneWay();
+        //checkOneWay();
+        compressString();
+    }
+
+    private static void compressString() {
+        List<String> words = List.of("aabcccccaaa", "a", "ab", "aa", "aaa", "aabb", "aabbc", "aabbbcc");
+        //List<String> words = List.of("aabcccccaaa");
+        System.out.println("\nCompress string");
+        for (String word : words) {
+            System.out.printf(ANSWER_FORMAT, word, StringCompression.compress(word));
+        }
     }
 
     private static void checkOneWay() {
