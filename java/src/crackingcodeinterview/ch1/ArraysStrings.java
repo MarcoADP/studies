@@ -1,5 +1,8 @@
 package crackingcodeinterview.ch1;
 
+import tuple.Tuple;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class ArraysStrings {
@@ -11,7 +14,34 @@ public class ArraysStrings {
         //verifyUniqueCharacters();
         //verifyStringsPermutation();
         //urlify();
-        checkPermutationPalindrome();
+        //checkPermutationPalindrome();
+        checkOneWay();
+    }
+
+    private static void checkOneWay() {
+        List<Tuple<String, String>> tupleList = new ArrayList<>();
+        tupleList.add(new Tuple<>("pale", "ple"));
+        tupleList.add(new Tuple<>("ple", "pale"));
+        tupleList.add(new Tuple<>("ple", "ple"));
+        tupleList.add(new Tuple<>("pale", "pele"));
+        tupleList.add(new Tuple<>("pale", "pela"));
+        tupleList.add(new Tuple<>("pales", "pale"));
+        tupleList.add(new Tuple<>("pale", "bale"));
+        tupleList.add(new Tuple<>("pale", "bae"));
+
+        System.out.println("\nCheck one way in separate steps");
+        for (Tuple<String, String> tuple : tupleList) {
+            String w1 = tuple.getFirst();
+            String w2 = tuple.getSecond();
+            System.out.printf(ANSWER_FORMAT, String.format("%s-%s", w1, w2), OneWay.isOneWayCheckSeparate(w1, w2));
+        }
+
+        System.out.println("\nCheck one way in one step");
+        for (Tuple<String, String> tuple : tupleList) {
+            String w1 = tuple.getFirst();
+            String w2 = tuple.getSecond();
+            System.out.printf(ANSWER_FORMAT, String.format("%s-%s", w1, w2), OneWay.isOneWayCheckTogether(w1, w2));
+        }
     }
 
     private static void checkPermutationPalindrome() {
