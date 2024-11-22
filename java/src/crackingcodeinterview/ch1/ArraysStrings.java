@@ -17,7 +17,21 @@ public class ArraysStrings {
         //checkPermutationPalindrome();
         //checkOneWay();
         //compressString();
-        zeroMatrix();
+        //zeroMatrix();
+        stringRotation();
+    }
+
+    private static void stringRotation() {
+        List<Tuple<String, String>> tupleList = new ArrayList<>();
+        tupleList.add(new Tuple<>("123456", "456123"));
+        tupleList.add(new Tuple<>("123456", "561234"));
+        tupleList.add(new Tuple<>("123456", "561233"));
+
+        for (Tuple<String, String> tuple : tupleList) {
+            String w1 = tuple.getFirst();
+            String w2 = tuple.getSecond();
+            System.out.printf(ANSWER_FORMAT, String.format("%s-%s", w1, w2), StringRotation.isStringRotation(w1, w2));
+        }
     }
 
     private static void zeroMatrix() {
