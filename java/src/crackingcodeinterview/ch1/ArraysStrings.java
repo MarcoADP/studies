@@ -16,7 +16,21 @@ public class ArraysStrings {
         //urlify();
         //checkPermutationPalindrome();
         //checkOneWay();
-        compressString();
+        //compressString();
+        zeroMatrix();
+    }
+
+    private static void zeroMatrix() {
+
+        int[][] matrix = new int[][] {{1, 2, 3, 9, 1}, {4, 5, 6, 0, 2}, {0, 7, 8, 9, 3}, {1, 2, 3, 4, 5}};
+        ZeroMatrix.printMatrix(matrix);
+        int[][] result = ZeroMatrix.zeroMatrix(matrix);
+        ZeroMatrix.printMatrix(result);
+
+        matrix = new int[][] {{1, 2, 3, 9, 1}, {4, 5, 6, 0, 2}, {0, 7, 8, 9, 3}, {1, 2, 3, 4, 5}};
+        ZeroMatrix.printMatrix(matrix);
+        result = ZeroMatrix.zeroMatrixWithoutAux(matrix);
+        ZeroMatrix.printMatrix(result);
     }
 
     private static void compressString() {
