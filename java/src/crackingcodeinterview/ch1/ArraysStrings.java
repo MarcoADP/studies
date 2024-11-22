@@ -10,7 +10,26 @@ public class ArraysStrings {
 
         //verifyUniqueCharacters();
         //verifyStringsPermutation();
-        urlify();
+        //urlify();
+        checkPermutationPalindrome();
+    }
+
+    private static void checkPermutationPalindrome() {
+        List<String> words = List.of("Tact Coa", "Cevce", "abcab", "abca", "abcaa");
+        System.out.println("\nCheck if it's a permutation of a palindrome checking table");
+        for (String word : words) {
+            System.out.printf(ANSWER_FORMAT, word, Palindrome.isPermutationOfPalindromeCheckingTable(word));
+        }
+
+        System.out.println("\nCheck if it's a permutation of a palindrome without checking table");
+        for (String word : words) {
+            System.out.printf(ANSWER_FORMAT, word, Palindrome.isPermutationOfPalindromeWithoutCheckingTable(word));
+        }
+
+        System.out.println("\nCheck if it's a permutation of a palindrome with bit vector");
+        for (String word : words) {
+            System.out.printf(ANSWER_FORMAT, word, Palindrome.isPermutationOfPalindromeBitVector(word));
+        }
     }
 
     private static void urlify() {
