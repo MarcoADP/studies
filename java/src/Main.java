@@ -1,6 +1,7 @@
 import binarytree.AVLTree;
 import binarytree.BinaryTree;
 import hashtable.HashTable;
+import linkedlist.DoublyLinkedList;
 import linkedlist.LinkedList;
 
 public class Main {
@@ -10,8 +11,21 @@ public class Main {
         //createLinkedList();
         //createBinaryTree();
         //createAvlTree();
-        createHashTable();
+        //createHashTable();
+        createDoublyLinkedList();
 
+    }
+
+    private static void createDoublyLinkedList() {
+        DoublyLinkedList<Integer> list = new DoublyLinkedList<>();
+        list.addBegin(1);
+        list.addBegin(2);
+        list.addEnd(3);
+        list.addBegin(4);
+        list.addEnd(0);
+        list.addBegin(5);
+        list.print();
+        list.printReverse();
     }
 
     private static void createBinaryTree() {
