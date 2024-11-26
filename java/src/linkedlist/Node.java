@@ -18,6 +18,10 @@ public class Node<T> {
         return next;
     }
 
+    public void setNext(Node<T> next) {
+        this.next = next;
+    }
+
     @Override
     public String toString() {
         return "Node{" +
