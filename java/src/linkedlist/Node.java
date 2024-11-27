@@ -22,6 +22,10 @@ public class Node<T> {
         this.next = next;
     }
 
+    public void setValue(T value) {
+        this.value = value;
+    }
+
     @Override
     public String toString() {
         return "Node{" +
