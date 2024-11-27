@@ -1,6 +1,7 @@
 package crackingcodeinterview.ch2;
 
 import linkedlist.LinkedList;
+import linkedlist.Node;
 
 import static crackingcodeinterview.ch2.FindKElement.findKElementToLastFindingLength;
 import static crackingcodeinterview.ch2.FindKElement.findKElementToLastRecursive;
@@ -9,7 +10,37 @@ public class LinkedLists {
 
     public static void main(String[] args) {
         //removeDuplicates();
-        findKElementToLast();
+        //findKElementToLast();
+        partition();
+    }
+
+    private static void partition() {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(3);
+        list.add(5);
+        list.add(8);
+        list.add(5);
+        list.add(10);
+        list.add(2);
+        list.add(1);
+
+        list.print();
+
+        int n = 5;
+        System.out.println("\nPartition list by adding elements at begin and end of a new linked list");
+        LinkedList<Integer> newList = Partition.partitionNewList(list, n);
+        newList.print();
+
+        System.out.println("\nPartition list by creating two linked lists");
+        newList = Partition.partitionTwoNewLists(list, n);
+        newList.print();
+
+        System.out.println("\nPartition list using only Node");
+        Node<Integer> node = Partition.partitionUsingNode(list.head, n);
+        newList = new LinkedList<>();
+        newList.head = node;
+        newList.print();
+
     }
 
     private static void findKElementToLast() {

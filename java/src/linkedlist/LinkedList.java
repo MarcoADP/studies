@@ -17,6 +17,12 @@ public class LinkedList<T> {
         }
     }
 
+    public void addBegin(T value) {
+        Node<T> newHead = new Node<>(value);
+        newHead.setNext(head);
+        head = newHead;
+    }
+
     public void remove(T value) {
         if (head == null) {
             return;
