@@ -11,7 +11,108 @@ public class LinkedLists {
     public static void main(String[] args) {
         //removeDuplicates();
         //findKElementToLast();
-        partition();
+        //partition();
+        //sumLinkedListReverse();
+        sumLinkedList();
+    }
+
+    private static void sumLinkedList() {
+        LinkedList<Integer> list1 = new LinkedList<>();
+        list1.add(6);
+        list1.add(1);
+        list1.add(7);
+
+        LinkedList<Integer> list2 = new LinkedList<>();
+        list2.add(2);
+        list2.add(9);
+        list2.add(5);
+        System.out.println("\nSum Linked Lists");
+        list1.print();
+        list2.print();
+        LinkedList<Integer> result = SumLinkedinList.sum(list1, list2);
+        result.print();
+
+        list1 = new LinkedList<>();
+        list1.add(9);
+        list1.add(0);
+
+        list2 = new LinkedList<>();
+        list2.add(1);
+        list2.add(2);
+        list2.add(0);
+
+        System.out.println("\nSum Linked Lists");
+        list1.print();
+        list2.print();
+        result = SumLinkedinList.sum(list1, list2);
+        result.print();
+
+        System.out.println("\nSum Linked Lists in reverse order");
+        list1.print();
+        list2.print();
+        result = SumLinkedinList.sumReverse(list1, list2);
+        result.print();
+
+        list1 = new LinkedList<>();
+        list1.add(7);
+        list1.add(9);
+        list1.add(9);
+
+        list2 = new LinkedList<>();
+        list2.add(2);
+
+        System.out.println("\nSum Linked Lists");
+        list1.print();
+        list2.print();
+        result = SumLinkedinList.sum(list1, list2);
+        result.print();
+    }
+
+    private static void sumLinkedListReverse() {
+        LinkedList<Integer> list1 = new LinkedList<>();
+        list1.add(7);
+        list1.add(1);
+        list1.add(6);
+
+        LinkedList<Integer> list2 = new LinkedList<>();
+        list2.add(5);
+        list2.add(9);
+        list2.add(2);
+
+        System.out.println("\nSum Linked Lists in reverse order");
+        list1.print();
+        list2.print();
+        LinkedList<Integer> result = SumLinkedinList.sumReverse(list1, list2);
+        result.print();
+
+        list1 = new LinkedList<>();
+        list1.add(0);
+        list1.add(9);
+
+        list2 = new LinkedList<>();
+        list2.add(0);
+        list2.add(2);
+        list2.add(1);
+
+        System.out.println("\nSum Linked Lists in reverse order");
+        list1.print();
+        list2.print();
+        result = SumLinkedinList.sumReverse(list1, list2);
+        result.print();
+
+        list1 = new LinkedList<>();
+        list1.add(9);
+        list1.add(9);
+        list1.add(7);
+
+        list2 = new LinkedList<>();
+        list2.add(2);
+
+        System.out.println("\nSum Linked Lists in reverse order");
+        list1.print();
+        list2.print();
+        result = SumLinkedinList.sumReverse(list1, list2);
+        result.print();
     }
 
     private static void partition() {
