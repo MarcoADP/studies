@@ -89,4 +89,24 @@ public class LinkedList<T> {
         head = head.next;
         return node.value;
     }
+
+    public boolean isEqual(LinkedList<T> other) {
+
+        if (this.size() != other.size()) {
+            return false;
+        }
+
+        Node<T> node = this.head;
+        Node<T> otherNode = other.head;
+        while (node != null && otherNode != null) {
+            if (!node.getValue().equals(otherNode.getValue())) {
+                return false;
+            }
+            node = node.getNext();
+            otherNode = otherNode.getNext();
+        }
+
+        return true;
+    }
+
 }

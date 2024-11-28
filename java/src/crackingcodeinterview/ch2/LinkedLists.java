@@ -13,7 +13,44 @@ public class LinkedLists {
         //findKElementToLast();
         //partition();
         //sumLinkedListReverse();
-        sumLinkedList();
+        //sumLinkedList();
+        isPalindrome();
+    }
+
+    private static void isPalindrome() {
+
+        LinkedList<Integer> list1 = new LinkedList<>();
+        list1.add(1);
+        list1.add(2);
+        list1.add(3);
+        list1.add(2);
+        list1.add(1);
+
+        LinkedList<Integer> list2 = new LinkedList<>();
+        list2.add(1);
+        list2.add(2);
+        list2.add(3);
+        list2.add(3);
+        list2.add(2);
+        list2.add(1);
+
+        LinkedList<Integer> list3 = new LinkedList<>();
+        list3.add(1);
+        list3.add(2);
+        list3.add(3);
+        list3.add(1);
+
+        System.out.println("\nCheck if it's palindrome by reversing the second linked list");
+
+        list1.print();
+        System.out.printf("PALINDROME? %s%n", Palindrome.isPalindromeReverse(list1) ? "YES" : "NO");
+
+        list2.print();
+        System.out.printf("PALINDROME? %s%n", Palindrome.isPalindromeReverse(list2) ? "YES" : "NO");
+
+        list3.print();
+        System.out.printf("PALINDROME? %s%n", Palindrome.isPalindromeReverse(list3) ? "YES" : "NO");
+
     }
 
     private static void sumLinkedList() {
