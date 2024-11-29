@@ -15,8 +15,31 @@ public class LinkedLists {
         //sumLinkedListReverse();
         //sumLinkedList();
         //isPalindrome();
-        intersection();
+        //intersection();
+        loop();
     }
+
+    private static void loop() {
+        Node<Integer> node1 = new Node<>(1);
+        Node<Integer> node2 = new Node<>(2);
+        Node<Integer> node3 = new Node<>(3);
+        Node<Integer> node4 = new Node<>(4);
+        Node<Integer> node5 = new Node<>(5);
+        Node<Integer> node6 = new Node<>(6);
+
+        LinkedList<Integer> list = new LinkedList<>();
+        list.addNode(node1);
+        list.addNode(node2);
+        list.addNode(node3);
+        list.addNode(node4);
+        list.addNode(node5);
+        list.addNode(node6);
+        list.addNode(node4);
+        System.out.println(Loop.findLoopBySearching(list));
+        System.out.println(Loop.findLoopWithRunner(list));
+
+    }
+
 
     private static void intersection() {
         Node<Integer> node1 = new Node<>(1);
