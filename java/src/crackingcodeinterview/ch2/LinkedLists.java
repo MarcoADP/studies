@@ -14,7 +14,37 @@ public class LinkedLists {
         //partition();
         //sumLinkedListReverse();
         //sumLinkedList();
-        isPalindrome();
+        //isPalindrome();
+        intersection();
+    }
+
+    private static void intersection() {
+        Node<Integer> node1 = new Node<>(1);
+        Node<Integer> node2 = new Node<>(2);
+        Node<Integer> node3 = new Node<>(3);
+        Node<Integer> node4 = new Node<>(4);
+        Node<Integer> node5 = new Node<>(5);
+        Node<Integer> node6 = new Node<>(6);
+
+        LinkedList<Integer> list1 = new LinkedList<>();
+        list1.addNode(node1);
+        list1.addNode(node2);
+        list1.addNode(node3);
+        list1.addNode(node4);
+        list1.addNode(node5);
+        list1.addNode(node6);
+
+        LinkedList<Integer> list2 = new LinkedList<>();
+        Node<Integer> node7 = new Node<>(7);
+        list2.addNode(node7);
+        list2.addNode(node6);
+
+        list1.print();
+        list2.print();
+
+        System.out.println(Intersection.findIntersectionByOffsetBiggerList(list1, list2));
+        System.out.println(Intersection.findIntersectionByRemovingElements(list1, list2));
+
     }
 
     private static void isPalindrome() {
