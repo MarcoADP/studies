@@ -3,6 +3,7 @@ import binarytree.BinaryTree;
 import hashtable.HashTable;
 import linkedlist.DoublyLinkedList;
 import linkedlist.LinkedList;
+import queue.Queue;
 import stack.Stack;
 
 public class Main {
@@ -14,8 +15,24 @@ public class Main {
         //createAvlTree();
         //createHashTable();
         //createDoublyLinkedList();
-        createStack();
+        //createStack();
+        createQueue();
+    }
 
+    private static void createQueue() {
+        Queue<Integer> queue = new Queue<>();
+        System.out.printf("Removing %s from the queue %n", queue.remove());
+        queue.print();
+        queue.add(1);
+        queue.add(2);
+        queue.add(3);
+        queue.add(4);
+        queue.print();
+        System.out.printf("Removing %s from the queue %n", queue.remove());
+        System.out.printf("Removing %s from the queue %n", queue.remove());
+        System.out.println(queue.peek());
+        queue.add(5);
+        queue.print();
     }
 
     private static void createStack() {
