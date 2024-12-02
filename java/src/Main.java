@@ -3,6 +3,7 @@ import binarytree.BinaryTree;
 import hashtable.HashTable;
 import linkedlist.DoublyLinkedList;
 import linkedlist.LinkedList;
+import stack.Stack;
 
 public class Main {
 
@@ -12,8 +13,25 @@ public class Main {
         //createBinaryTree();
         //createAvlTree();
         //createHashTable();
-        createDoublyLinkedList();
+        //createDoublyLinkedList();
+        createStack();
 
+    }
+
+    private static void createStack() {
+        Stack<Integer> stack = new Stack<>();
+        System.out.printf("Removing %s from the stack %n", stack.pop());
+        stack.print();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.print();
+        System.out.printf("Removing %s from the stack %n", stack.pop());
+        System.out.printf("Removing %s from the stack %n", stack.pop());
+        System.out.println(stack.peek());
+        stack.push(5);
+        stack.print();
     }
 
     private static void createDoublyLinkedList() {
