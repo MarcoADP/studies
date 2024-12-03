@@ -12,7 +12,30 @@ public class StackQueue {
 
     public static void main(String[] args) {
 
-        createFixedMultiStacks();
+        //createFixedMultiStacks();
+        createStackMin();
+    }
+
+    private static void createStackMin() {
+        StackMin stack = new StackMin();
+        stack.print();
+        stack.push(1);
+        stack.push(2);
+        stack.push(0);
+        stack.push(3);
+        stack.push(1);
+        stack.print();
+        stack.pop();
+        stack.pop();
+        stack.print();
+        stack.pop();
+        stack.print();
+        stack.push(-1);
+        stack.print();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.print();
     }
 
     private static void createFixedMultiStacks() {
