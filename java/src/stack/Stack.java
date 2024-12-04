@@ -32,6 +32,16 @@ public class Stack<T> {
         return top == null;
     }
 
+    public int size() {
+        StackNode<T> node = top;
+        int size = 0;
+        while (node != null) {
+            size++;
+            node = node.getNext();
+        }
+        return size;
+    }
+
     public void print() {
         if (isEmpty()) {
             System.out.println("Stack empty");
