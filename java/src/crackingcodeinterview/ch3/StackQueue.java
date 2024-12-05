@@ -14,7 +14,23 @@ public class StackQueue {
 
         //createFixedMultiStacks();
         //createStackMin();
-        createPlatesStack();
+        //createPlatesStack();
+        createQueueWithStack();
+    }
+
+    private static void createQueueWithStack() {
+        QueueWithStacks<Integer> queue = new QueueWithStacks<>();
+        queue.add(1);
+        queue.add(2);
+        queue.add(3);
+        queue.print();
+        queue.remove();
+        queue.add(4);
+        queue.print();
+        queue.add(5);
+        queue.add(6);
+        queue.remove();
+        queue.print();
     }
 
     private static void createPlatesStack() {
