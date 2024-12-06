@@ -1,6 +1,7 @@
 package crackingcodeinterview.ch3;
 
 import crackingcodeinterview.ch1.*;
+import stack.Stack;
 import tuple.Tuple;
 
 import java.util.ArrayList;
@@ -15,7 +16,26 @@ public class StackQueue {
         //createFixedMultiStacks();
         //createStackMin();
         //createPlatesStack();
-        createQueueWithStack();
+        //createQueueWithStack();
+        createSortedStack();
+    }
+
+    private static void createSortedStack() {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(1);
+        stack.push(3);
+        stack.push(2);
+        stack.print();
+        SortedStack.sort(stack);
+        stack.print();
+
+        stack.push(0);
+        stack.push(5);
+        stack.push(6);
+        stack.push(4);
+        stack.print();
+        SortedStack.sort(stack);
+        stack.print();
     }
 
     private static void createQueueWithStack() {
