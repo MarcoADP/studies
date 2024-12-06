@@ -17,7 +17,29 @@ public class StackQueue {
         //createStackMin();
         //createPlatesStack();
         //createQueueWithStack();
-        createSortedStack();
+        //createSortedStack();
+        createAnimalQueue();
+    }
+
+    private static void createAnimalQueue() {
+        AnimalQueue animalQueue = new AnimalQueue();
+        System.out.printf("ANY: %s%n", animalQueue.dequeueAny());
+        animalQueue.enqueue(new AnimalQueue.Animal("Dog 1", AnimalQueue.Species.DOG));
+        animalQueue.enqueue(new AnimalQueue.Animal("Cat 1", AnimalQueue.Species.CAT));
+        System.out.printf("ANY: %s%n", animalQueue.dequeueAny());
+        System.out.printf("DOG: %s%n", animalQueue.dequeueDog());
+        animalQueue.enqueue(new AnimalQueue.Animal("Cat 2", AnimalQueue.Species.CAT));
+        animalQueue.enqueue(new AnimalQueue.Animal("Dog 2", AnimalQueue.Species.DOG));
+        System.out.printf("CAT: %s%n", animalQueue.dequeueCat());
+        System.out.printf("ANY: %s%n", animalQueue.dequeueAny());
+        animalQueue.enqueue(new AnimalQueue.Animal("Cat 3", AnimalQueue.Species.CAT));
+        animalQueue.enqueue(new AnimalQueue.Animal("Dog 3", AnimalQueue.Species.DOG));
+        animalQueue.enqueue(new AnimalQueue.Animal("Cat 4", AnimalQueue.Species.CAT));
+        animalQueue.enqueue(new AnimalQueue.Animal("Dog 4", AnimalQueue.Species.DOG));
+        animalQueue.enqueue(new AnimalQueue.Animal("Cat 5", AnimalQueue.Species.CAT));
+        animalQueue.enqueue(new AnimalQueue.Animal("Dog 5", AnimalQueue.Species.DOG));
+        System.out.printf("ANY: %s%n", animalQueue.dequeueAny());
+        animalQueue.print();
     }
 
     private static void createSortedStack() {
