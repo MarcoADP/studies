@@ -4,15 +4,15 @@ import linkedlist.LinkedList;
 
 public class BinaryTree {
 
-    Node root;
+    TreeNode root;
 
     public void insert(int value) {
         root = insertRecursive(root, value);
     }
 
-    protected Node insertRecursive(Node node, int value) {
+    protected TreeNode insertRecursive(TreeNode node, int value) {
         if (node == null) {
-            return new Node(value);
+            return new TreeNode(value);
         }
 
         if (value < node.value) {
@@ -29,7 +29,7 @@ public class BinaryTree {
 
     }
 
-    protected int getHeight(Node node) {
+    protected int getHeight(TreeNode node) {
         return (node == null) ? 0 : node.height;
     }
 
@@ -40,7 +40,7 @@ public class BinaryTree {
             System.out.println("Tree empty");
         }
 
-        LinkedList<Node> queue = new LinkedList<>();
+        LinkedList<TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
         int height = 1;
@@ -54,7 +54,7 @@ public class BinaryTree {
                     return;
                 }
 
-                Node node = queue.poll();
+                TreeNode node = queue.poll();
                 System.out.printf("%s [%s | %s] \t", node, getValue(node.left), getValue(node.right));
 
                 if (node.left != null) {
@@ -72,7 +72,7 @@ public class BinaryTree {
 
     }
 
-    private int getValue(Node node) {
+    private int getValue(TreeNode node) {
         return node == null ? -1 : node.value;
     }
 
@@ -80,7 +80,7 @@ public class BinaryTree {
         return searchNode(root, value);
     }
 
-    private boolean searchNode(Node root, int value) {
+    private boolean searchNode(TreeNode root, int value) {
         if (root == null || root.value == value) {
             return root != null;
         }
@@ -96,7 +96,7 @@ public class BinaryTree {
         return isSameNode(root, otherTree.root);
     }
 
-    private boolean isSameNode(Node node1, Node node2) {
+    private boolean isSameNode(TreeNode node1, TreeNode node2) {
 
         if (node1 == null && node2 == null) {
             return true;

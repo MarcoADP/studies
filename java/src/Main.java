@@ -16,7 +16,32 @@ public class Main {
         //createHashTable();
         //createDoublyLinkedList();
         //createStack();
-        createQueue();
+        //createQueue();
+        compareBinaryAVLTree();
+    }
+
+    private static void compareBinaryAVLTree() {
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.insert(8);
+        binaryTree.insert(4);
+        binaryTree.insert(10);
+        binaryTree.insert(2);
+        binaryTree.insert(12);
+        binaryTree.insert(20);
+
+        AVLTree avlTree = new AVLTree();
+        avlTree.insert(8);
+        avlTree.insert(4);
+        avlTree.insert(10);
+        avlTree.insert(2);
+        avlTree.insert(12);
+        avlTree.insert(20);
+
+        System.out.println("BINARY TREE");
+        binaryTree.print();
+
+        System.out.println("AVL TREE");
+        avlTree.print();
     }
 
     private static void createQueue() {

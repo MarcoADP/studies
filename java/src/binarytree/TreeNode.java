@@ -1,14 +1,14 @@
 package binarytree;
 
-public class Node {
+public class TreeNode {
 
     int value;
     int height;
 
-    Node left;
-    Node right;
+    TreeNode left;
+    TreeNode right;
 
-    public Node(int value) {
+    public TreeNode(int value) {
         this.value = value;
         this.height = 1;
         this.left = null;
