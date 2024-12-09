@@ -1,5 +1,5 @@
 import binarytree.AVLTree;
-import binarytree.BinaryTree;
+import binarytree.BinarySearchTree;
 import hashtable.HashTable;
 import linkedlist.DoublyLinkedList;
 import linkedlist.LinkedList;
@@ -21,13 +21,13 @@ public class Main {
     }
 
     private static void compareBinaryAVLTree() {
-        BinaryTree binaryTree = new BinaryTree();
-        binaryTree.insert(8);
-        binaryTree.insert(4);
-        binaryTree.insert(10);
-        binaryTree.insert(2);
-        binaryTree.insert(12);
-        binaryTree.insert(20);
+        BinarySearchTree binarySearchTree = new BinarySearchTree();
+        binarySearchTree.insert(8);
+        binarySearchTree.insert(4);
+        binarySearchTree.insert(10);
+        binarySearchTree.insert(2);
+        binarySearchTree.insert(12);
+        binarySearchTree.insert(20);
 
         AVLTree avlTree = new AVLTree();
         avlTree.insert(8);
@@ -38,7 +38,7 @@ public class Main {
         avlTree.insert(20);
 
         System.out.println("BINARY TREE");
-        binaryTree.print();
+        binarySearchTree.print();
 
         System.out.println("AVL TREE");
         avlTree.print();
@@ -89,21 +89,21 @@ public class Main {
     }
 
     private static void createBinaryTree() {
-        BinaryTree binaryTree = new BinaryTree();
-        binaryTree.insert(50);
-        binaryTree.insert(30);
-        binaryTree.insert(70);
-        binaryTree.insert(20);
-        binaryTree.insert(40);
-        binaryTree.insert(60);
-        binaryTree.insert(80);
-        binaryTree.insert(65);
-        binaryTree.insert(25);
-        binaryTree.insert(68);
-        binaryTree.insert(67);
-        binaryTree.insert(69);
+        BinarySearchTree binarySearchTree = new BinarySearchTree();
+        binarySearchTree.insert(50);
+        binarySearchTree.insert(30);
+        binarySearchTree.insert(70);
+        binarySearchTree.insert(20);
+        binarySearchTree.insert(40);
+        binarySearchTree.insert(60);
+        binarySearchTree.insert(80);
+        binarySearchTree.insert(65);
+        binarySearchTree.insert(25);
+        binarySearchTree.insert(68);
+        binarySearchTree.insert(67);
+        binarySearchTree.insert(69);
 
-        binaryTree.print();
+        binarySearchTree.print();
     }
 
     private static void createAvlTree() {

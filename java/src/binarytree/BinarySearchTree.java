@@ -2,7 +2,7 @@ package binarytree;
 
 import linkedlist.LinkedList;
 
-public class BinaryTree {
+public class BinarySearchTree {
 
     TreeNode root;
 
@@ -92,7 +92,7 @@ public class BinaryTree {
         }
     }
 
-    public boolean isSameTree(BinaryTree otherTree) {
+    public boolean isSameTree(BinarySearchTree otherTree) {
         return isSameNode(root, otherTree.root);
     }
 

@@ -1,6 +1,6 @@
 package binarytree;
 
-public class AVLTree extends BinaryTree {
+public class AVLTree extends BinarySearchTree {
 
     public void insert(int value) {
         root = insertRecursive(root, value);
