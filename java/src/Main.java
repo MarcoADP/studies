@@ -1,5 +1,6 @@
 import binarytree.AVLTree;
 import binarytree.BinarySearchTree;
+import binarytree.BinaryTree;
 import hashtable.HashTable;
 import linkedlist.DoublyLinkedList;
 import linkedlist.LinkedList;
@@ -17,10 +18,19 @@ public class Main {
         //createDoublyLinkedList();
         //createStack();
         //createQueue();
-        compareBinaryAVLTree();
+        compareBinaryTrees();
     }
 
-    private static void compareBinaryAVLTree() {
+    private static void compareBinaryTrees() {
+
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.insert(8);
+        binaryTree.insert(4);
+        binaryTree.insert(10);
+        binaryTree.insert(2);
+        binaryTree.insert(12);
+        binaryTree.insert(20);
+
         BinarySearchTree binarySearchTree = new BinarySearchTree();
         binarySearchTree.insert(8);
         binarySearchTree.insert(4);
@@ -38,6 +48,9 @@ public class Main {
         avlTree.insert(20);
 
         System.out.println("BINARY TREE");
+        binaryTree.print();
+
+        System.out.println("BINARY SEARCH TREE");
         binarySearchTree.print();
 
         System.out.println("AVL TREE");

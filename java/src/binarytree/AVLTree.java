@@ -1,12 +1,12 @@
 package binarytree;
 
-public class AVLTree extends BinarySearchTree {
+public class AVLTree extends BinaryTreeAbstract {
 
+    @Override
     public void insert(int value) {
         root = insertRecursive(root, value);
     }
 
-    @Override
     protected TreeNode insertRecursive(TreeNode node, int value) {
 
         if (node == null) {
